@@ -20,6 +20,7 @@ headers = {
 
 def fetch(url):
     time.sleep(1)
+    print("请求地址：" + url)
     session = requests.Session()
     response = session.get(url, headers=headers)
     text = response.text.encode(response.encoding).decode("gbk")
